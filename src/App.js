@@ -60,10 +60,9 @@ class App extends React.Component {
             <Suspense fallback={<div className="loading" />}>
               <Router>
                 <Switch>
-                  <ProtectedRoute
+                  <Route
                     path={adminRoot}
                     component={ViewApp}
-                    roles={[UserRole.Admin, UserRole.Editor]}
                   />
                   <Route
                     path="/user"
